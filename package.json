@@ -12,6 +12,7 @@
     "build": "webpack",
     "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix && npm run build"
   },
+  "heroku-run-build-script": true,
   "author": "",
   "license": "ISC",
   "dependencies": {
