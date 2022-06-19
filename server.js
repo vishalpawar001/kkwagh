@@ -91,10 +91,10 @@ app.use("/", (req, res) => {
 
 if(process.env.NODE_ENV == "production"){
   app.use(express.static("client/build"));
-  // const path = require("path");
-  // app.length("*",(req,res)=>{
-  //   res.sendFile(path.resolve(_dirname,'client', 'build','index.html'));
-  // })
+  const path = require("path");
+  app.length("*",(req,res)=>{
+    res.sendFile(path.resolve(_dirname,'client', 'build','index.html'));
+  })
 }
 
 server.listen(PORT, () => {
